@@ -1,12 +1,11 @@
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # April 9, 2018, Siwei Wang
 # Explore the relationship between Attrition and other factors
-# BIA 650 Group Project
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 library(tidyverse)
 
-employee_data <- read_csv(file = "/Users/iriswang/Google Drive/Stevens/BIA Spring 2018/BIA 650/Individual project/Group project/WA_Fn-UseC_-HR-Employee-Attrition.csv")
+employee_data <- read_csv(file = "/Users/WA_Fn-UseC_-HR-Employee-Attrition.csv")
 
 employee_data <- employee_data %>% mutate(Attrition = if_else(Attrition == "Yes", 1, 0), 
                                           Gender = if_else(Gender == "Male", 1, 0), 
